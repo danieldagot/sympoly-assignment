@@ -14,30 +14,33 @@ class Approver(BaseModel):
 
 
 class Transaction(BaseModel):
-    Date: datetime
-    Amount: float
-    Currency: str
-    Description: str
-class StatusEnum(IntEnum):
-    Draft = 0
-    Submitted = 1
-    Approved = 2 
-    Rejected = 3
+    Data: str = Field(min_length=10, pattern=r"(\d{14})([CD])(\d+,\d{2})([A-Z]{3})")
+    Reference: str
+    Details : str
+class StatusEnum(Enum):
+    Draft = "0"
+    Submitted = "1"
+    Approved = "2"
+    Rejected = "3"
 
 class CurrencyEnum(Enum):
     USD = 'USD'
     EUR = 'EUR'
     GBP = 'GBP'
     
+class Details (BaseModel):
+    CreatedAt:str 
+    Status  : StatusEnum
 class ReportDetails(BaseModel):
-    CreatedAt: datetime
-    Status: StatusEnum
-    TotalAmount: float
-    Currency: CurrencyEnum
-
-
-class MercuryEXRF(BaseModel):
-    Report: ReportDetails
+    ID :  str
     Reporter: Reporter
     Approvers: List[Approver]
     Transactions: List[Transaction]
+    Details : Details
+
+
+
+class MercuryEXRF(BaseModel):
+    
+    Report: ReportDetails
+

@@ -74,7 +74,6 @@ Mercury's EXRF Extension uses a custom encoding for some of the fields. Below we
 ### Date
 
 A `Date` is a string that represents a date object in the format `YYYYMMDDhhmmss`
-
 - `YYYY` - Year
 - `MM` - Month
 - `DD` - Day

@@ -1,15 +1,16 @@
 import json
 def parse_exrf(file_path):
-    data = {}  # Initialize the root of the data structure
-    current_context = data  # Pointer to the current working block or list
-    context_stack = []  # Stack to keep track of block/list hierarchy
-    list_mode = False  # Flag to indicate if currently parsing a list
-  
     with open(file_path, 'r') as file: 
+        return extract_data_from_exrf_string(file)
+def extract_data_from_exrf_string(content):
+        data = {}  # Initialize the root of the data structure
+        current_context = data  # Pointer to the current working block or list
+        context_stack = []  # Stack to keep track of block/list hierarchy
+        list_mode = False  # Flag to indicate if currently parsing a list
         temp_dict = {}
         new_list = []
         list_name = ""
-        for line in file:
+        for line in content:
             line = line.strip()
             if line.startswith(':') and not line.endswith('::') and not line.endswith('::::'):  # Start of a new block
                 list_mode = False 
@@ -44,12 +45,16 @@ def parse_exrf(file_path):
                 list_mode = False
                 # if context_stack:
                 #     current_context = context_stack[-1]  # Return to the previous context without removing it
+        return data
 
-    print(data)
+
+
+def read_exrf_file(file_path):
+    with open(file_path, 'r') as file:
+        content = file.read()
+    return content
+
+def save_dict_to_json(data, output_file="sample.json"):
     json_object = json.dumps(data, indent=4)
-    
-    with open("sample.json", "w") as outfile:
+    with open(output_file, "w") as outfile:
         outfile.write(json_object)
-    return data
-
-# Test the function with the new EXRF file.

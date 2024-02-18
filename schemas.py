@@ -31,6 +31,7 @@ class CurrencyEnum(Enum):
 class Details (BaseModel):
     CreatedAt:str 
     Status  : StatusEnum
+    
 class ReportDetails(BaseModel):
     ID :  str
     Reporter: Reporter

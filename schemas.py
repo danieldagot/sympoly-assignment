@@ -1,22 +1,25 @@
 from datetime import datetime
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr, Field,ConfigDict
 from typing import List, Optional
 from enum import Enum, IntEnum
 
 class Reporter(BaseModel):
-    FullName: str
-    Email: EmailStr
+    model_config = ConfigDict(extra='forbid')
+    fullname: str
+    email: EmailStr
  
 class Approver(BaseModel):
-    FullName: str
-    Email: EmailStr
-    ApprovalDate: Optional[datetime] = Field(None, alias='ApprovalDate')
+    model_config = ConfigDict(extra='forbid')
+    fullname: str
+    email: EmailStr
+    approvalDate: Optional[datetime] = Field(None, alias='ApprovalDate')
 
 
 class Transaction(BaseModel):
-    Data: str = Field(min_length=10, pattern=r"(\d{14})([CD])(\d+,\d{2})([A-Z]{3})")
-    Reference: str
-    Details : str
+    model_config = ConfigDict(extra='forbid')
+    data: str = Field(min_length=10, pattern=r"(\d{14})([CD])(\d+,\d{2})([A-Z]{3})")
+    reference: str
+    details : str
 class StatusEnum(Enum):
     Draft = "0"
     Submitted = "1"
@@ -29,19 +32,22 @@ class CurrencyEnum(Enum):
     GBP = 'GBP'
     
 class Details (BaseModel):
-    CreatedAt:str 
-    Status  : StatusEnum
+    model_config = ConfigDict(extra='forbid')
+    createdat:str 
+    status  : StatusEnum
     
 class ReportDetails(BaseModel):
-    ID :  str
-    Reporter: Reporter
-    Approvers: List[Approver]
-    Transactions: List[Transaction]
-    Details : Details
-
+    model_config = ConfigDict(extra='forbid')
+    id: str 
+    reporter: Reporter
+    approvers: List[Approver]
+    transactions: List[Transaction]
+    details: Details
+    
 
 
 class MercuryEXRF(BaseModel):
-    
-    Report: ReportDetails
+    model_config = ConfigDict(extra='forbid')
+    report: ReportDetails
+
 

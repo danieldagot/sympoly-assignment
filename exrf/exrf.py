@@ -17,13 +17,14 @@ def extract_data_from_exrf_string(content):
                 block_name = line.strip(':')
                 new_block = {}
                 if not list_mode:
-                    current_context[block_name] = new_block
+                    current_context[block_name.lower()] = new_block
                     context_stack.append(current_context)                
                 current_context = new_block
             elif line.endswith('::') and not line.endswith('::::'):  # End of a block
                 current_context = context_stack.pop()
             elif '::' in line and not line.endswith('::::'):  # Field within a block
                 key, value = line.split('::', 1)
+                key = key.lower()
                 if not list_mode:
                     current_context[key] = value
 
@@ -34,6 +35,7 @@ def extract_data_from_exrf_string(content):
             elif line.startswith('[') and not line.startswith('[['):  # Start of a list
                 list_mode = True
                 list_name = line.strip('[]')
+                list_name = list_name.lower()
                 temp_dict = {}
                 new_list = []
             elif line.startswith('::::'):
@@ -45,6 +47,7 @@ def extract_data_from_exrf_string(content):
                 list_mode = False
                 # if context_stack:
                 #     current_context = context_stack[-1]  # Return to the previous context without removing it
+        save_dict_to_json(data, "sample.json")
         return data
 
 

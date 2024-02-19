@@ -3,6 +3,9 @@ def parse_exrf(file_path):
     with open(file_path, 'r') as file: 
         return extract_data_from_exrf_string(file)
 def extract_data_from_exrf_string(content):
+        # replase \n with a new line
+        # print(content)
+        content = content.split("\n")
         data = {}  # Initialize the root of the data structure
         current_context = data  # Pointer to the current working block or list
         context_stack = []  # Stack to keep track of block/list hierarchy
@@ -11,6 +14,7 @@ def extract_data_from_exrf_string(content):
         new_list = []
         list_name = ""
         for line in content:
+            # print(line)
             line = line.strip()
             if line.startswith(':') and not line.endswith('::') and not line.endswith('::::'):  # Start of a new block
                 list_mode = False 

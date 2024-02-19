@@ -14,7 +14,7 @@ class Approver(BaseModel):
     email: EmailStr
     approvalDate: Optional[datetime] = Field(None, alias='ApprovalDate')
 
-
+# TODO add validation for the data field
 class Transaction(BaseModel):
     model_config = ConfigDict(extra='forbid')
     data: str = Field(min_length=10, pattern=r"(\d{14})([CD])(\d+,\d{2})([A-Z]{3})")

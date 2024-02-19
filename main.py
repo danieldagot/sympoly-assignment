@@ -3,17 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from exrf import extract_data_from_exrf_string
 import schemas
 app = FastAPI()
+from routes import router as api_router
+app = FastAPI()
+app.include_router(api_router)
 
 
-@app.post("/invoices/")
-async def upload_invoice(file: UploadFile):
-    content = await file.read()
-    content = content.decode("utf-8")
-    print(content)
-    data = extract_data_from_exrf_string(content)
-    print(data)
-    exrf_instance = schemas.MercuryEXRF(**data)
-    return exrf_instance
     # Here, parse the file content, convert it to the MercuryEXRF model, and save to MongoDB
     # This is a placeholder for parsing logic
     # parsed_data = {}  # Replace with actual parsing logic
@@ -25,6 +19,7 @@ async def upload_invoice(file: UploadFile):
 # async def get_invoices():
 #     invoices = await Invoice.find_all().to_list()
 #     return invoices
+
 
 # @app.get("/invoices/{invoice_id}")
 # async def get_invoice(invoice_id: str):
@@ -39,16 +34,6 @@ async def upload_invoice(file: UploadFile):
 #     return {"message": "Invoice deleted successfully"}
 # 
     
-
-    # Enable CORS
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )extract_data Beanie 
-
 # @app.on_event("startup")
 # async def startup_event():
 #     await init()  # Initialize Beanie with MongoDB

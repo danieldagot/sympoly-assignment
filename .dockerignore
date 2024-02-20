@@ -1,0 +1,16 @@
+**/__pycache__
+**/.pytest_cache
+**/.env
+**/.git
+**/.gitignore
+**/tests
+**/data
+**/taskDocs
+**/sample.json
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.bak
+*.tmp
+**/README.md

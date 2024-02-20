@@ -14,7 +14,6 @@ router = APIRouter()
 import logging
 @router.post("" ,response_model= Invoice )  # Ensure you have a valid path here
 async def upload_invoice(file: UploadFile ):
-
     file_name  = file.filename 
     if not file_name.endswith(".exrf"):
         raise HTTPException(status_code=422, detail="Invalid file type. Only .exrf files are allowed.")

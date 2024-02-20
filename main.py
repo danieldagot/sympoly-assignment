@@ -9,6 +9,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ValidationError, constr
 
 app = FastAPI()
+# FIXME:on_event deprecated
 @app.on_event("startup")
 async def startup_event():
     await init_db()
@@ -30,3 +31,15 @@ async def validation_exception_handler(request: Request, exc: ValidationError):
     )
 
 app.add_exception_handler(ValidationError, validation_exception_handler)
+
+@app.middleware("http")
+async def check_path(request: Request, call_next):
+    # Check the request path is not a invalid string  
+    path = request.url.path
+    if any(char in path for char in "`@$#%^*=<>[]|\\~"):
+        return JSONResponse({"error": "format error"}, status_code=400)
+
+    # If the path is valid, continue to the actual request handler
+    response = await call_next(request)
+    return response
+ 

@@ -1,10 +1,11 @@
 from beanie import Document, init_beanie
 from motor.motor_asyncio import AsyncIOMotorClient
-from schemas import MercuryEXRF, ReportDetails  # Adjust the import path as necessary
+from models.invoiceModelDetailed import  DetailedReportDetails 
+  # Adjust the import path as necessary
 import os
 import logging
 
-class Invoice(Document, ReportDetails):
+class Invoice(Document, DetailedReportDetails):
     pass
 
 async def init():

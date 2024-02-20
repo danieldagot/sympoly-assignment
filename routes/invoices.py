@@ -16,8 +16,12 @@ async def upload_invoice(file: UploadFile ):
     mercury_exrf_instance = validate_mercury_exrf(data)
     report =  mercury_exrf_instance.report.dict()
     report["invoice_id"] = report["id"]
+
     del report["id"]
     try:
+        invoiceData = await Invoice.find_one(Invoice.invoice_id == report["invoice_id"])
+        if invoiceData:
+            raise HTTPException(status_code=401, detail=f"Invoice with id {report['invoice_id']} already exists.")
         invoice_instance = Invoice(**report)
         logging.info(invoice_instance)
         await invoice_instance.save() 

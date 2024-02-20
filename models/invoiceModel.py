@@ -64,3 +64,4 @@ class MercuryEXRF(BaseModel):
     def to_detailed_transaction_data_report(self):
         self.report.to_detailed_transaction_data_report()
         return self
+    

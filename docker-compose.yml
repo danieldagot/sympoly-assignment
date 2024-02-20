@@ -1,41 +1,41 @@
 version: '3.1'
 
 services:
-  # mongodb2:
-  #   image: mongo:latest
-  #   container_name: mongodb
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: rootuser
-  #     MONGO_INITDB_ROOT_PASSWORD: rootpass
-  #   ports:
-  #     - "27017:27017"
-  #   volumes:
-  #     - ./data:/data/db
-    
-  sympolyassignment:
-    image: sympolyassignment
-    container_name: sympolyassignment
+  mongodb2:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: rootuser
+      MONGO_INITDB_ROOT_PASSWORD: rootpass
     ports:
-      - "8000:80"
-    build:
-      context: .
-      dockerfile: DockerFile
-    # depends_on:
-    #   - mongodb
-    # environment:
-    #   MONGO_URI: mongodb://rootuser:rootpass@mongodb:27017/sympolyassignment
+      - "27017:27017"
     volumes:
-      # - ./logs:/app/logs
-      # - ./uploads:/app/uploads
-      # - ./config:/app/config
-      # - ./public:/app/public
-      # - ./src:/app/src
-      # - ./package.json:/app/package.json
-      # - ./package-lock.json:/app/package-lock.json
-      # - ./server.js:/app/server.js
-      # - ./Dockerfile:/app/Dockerfile
-      - ./docker-compose.yml:/app/docker-compose.yml
-    command: ["poetry", "run", "uvicorn", "main:app" ,"--host" ,"0.0.0.0","--port","80", "--reload" ]
+      - ./data:/data/db
+    
+  # sympolyassignment:
+  #   image: sympolyassignment
+  #   container_name: sympolyassignment
+  #   ports:
+  #     - "8000:80"
+  #   build:
+  #     context: .
+  #     dockerfile: DockerFile
+  #   # depends_on:
+  #   #   - mongodb
+  #   # environment:
+  #   #   MONGO_URI: mongodb://rootuser:rootpass@mongodb:27017/sympolyassignment
+  #   volumes:
+  #     # - ./logs:/app/logs
+  #     # - ./uploads:/app/uploads
+  #     # - ./config:/app/config
+  #     # - ./public:/app/public
+  #     # - ./src:/app/src
+  #     # - ./package.json:/app/package.json
+  #     # - ./package-lock.json:/app/package-lock.json
+  #     # - ./server.js:/app/server.js
+  #     # - ./Dockerfile:/app/Dockerfile
+  #     - ./docker-compose.yml:/app/docker-compose.yml
+  #   command: ["poetry", "run", "uvicorn", "main:app" ,"--host" ,"0.0.0.0","--port","80", "--reload" ]
 
 
 # No need to define the volume at the bottom since we're using a bind mount

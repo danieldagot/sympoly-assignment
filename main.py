@@ -1,10 +1,11 @@
-from fastapi import FastAPI, UploadFile, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, UploadFile, HTTPException 
 from exrf import extract_data_from_exrf_string
-import schemas
-app = FastAPI()
+from database import init as init_db  # Adjust import as necessary
 from routes import router as api_router
 app = FastAPI()
+@app.on_event("startup")
+async def startup_event():
+    await init_db()
 app.include_router(api_router)
 
 
@@ -37,3 +38,4 @@ app.include_router(api_router)
 # @app.on_event("startup")
 # async def startup_event():
 #     await init()  # Initialize Beanie with MongoDB
+

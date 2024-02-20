@@ -1,4 +1,5 @@
 import json
+# TODO make code mode readbule 
 def parse_exrf(file_path):
     with open(file_path, 'r') as file: 
         return extract_data_from_exrf_string(file)

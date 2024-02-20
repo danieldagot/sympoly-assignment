@@ -1,6 +1,7 @@
 from typing import List
 import json
-from fastapi import APIRouter, UploadFile, HTTPException
+from fastapi import APIRouter, UploadFile, HTTPException, status
+from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 from database import Invoice  # Adjust import path as necessary
 # import schemas 
@@ -8,11 +9,12 @@ from models.invoiceModel import  MercuryEXRF
 from models.invoiceModelDetailed import  DetailedReportDetails 
 from pprint import pprint
 from exrf import extract_data_from_exrf_string  # Adjust import path as necessary
-
+from fastapi.encoders import jsonable_encoder 
 router = APIRouter()
 import logging
 @router.post("" ,response_model= Invoice )  # Ensure you have a valid path here
 async def upload_invoice(file: UploadFile ):
+
     file_name  = file.filename 
     if not file_name.endswith(".exrf"):
         raise HTTPException(status_code=422, detail="Invalid file type. Only .exrf files are allowed.")
@@ -34,8 +36,6 @@ async def upload_invoice(file: UploadFile ):
         await invoice_instance.save() 
         return invoice_instance  
     except Exception as e:
-        if isinstance(e, ValidationError):
-            raise HTTPException(status_code=422, detail=e.json())
         raise HTTPException(status_code=500, detail=f"Failed to save invoice data: {str(e)}")
     
 #  create get all invoices route
@@ -63,14 +63,7 @@ async def delete_invoice(invoice_id: str):
     raise HTTPException(status_code=404, detail="Invoice not found")
 
 def validate_mercury_exrf(data):
-    try:
-        mercury_exrf_instance = MercuryEXRF(**data)
-        return mercury_exrf_instance
-    except Exception as e:
-        # Handle exceptions, such as validation errors or database connection issues
-        # if the error is a validation error, return a 422 status code with the validation error details
-        if isinstance(e, ValidationError):
-            raise HTTPException(status_code=422, detail=e.json())
-
-
+    # try:
+    mercury_exrf_instance = MercuryEXRF(**data)
+    return mercury_exrf_instance
 

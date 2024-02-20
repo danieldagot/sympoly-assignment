@@ -37,7 +37,6 @@ class Transaction(BaseModel):
         amount = float(amount_str.replace(',', '.'))
         currency = currency_str
         self.data = DetailedTransactionData(date=date, type=type_str, amount=amount, currency=currency)
-        # return DetailedTransactionData(date=date, type=transaction_type, amount=amount, currency=currency)
 class StatusEnum(Enum):
     Draft = "0"
     Submitted = "1"

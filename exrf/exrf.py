@@ -3,8 +3,6 @@ def parse_exrf(file_path):
     with open(file_path, 'r') as file: 
         return extract_data_from_exrf_string(file)
 def extract_data_from_exrf_string(content):
-        # replase \n with a new line
-        # print(content)
         content = content.split("\n")
         data = {}  # Initialize the root of the data structure
         current_context = data  # Pointer to the current working block or list
@@ -13,6 +11,7 @@ def extract_data_from_exrf_string(content):
         temp_dict = {}
         new_list = []
         list_name = ""
+
         for line in content:
             # print(line)
             line = line.strip()
@@ -49,9 +48,7 @@ def extract_data_from_exrf_string(content):
                 new_list.append(temp_dict)
                 current_context[list_name] = new_list
                 list_mode = False
-                # if context_stack:
-                #     current_context = context_stack[-1]  # Return to the previous context without removing it
-        save_dict_to_json(data, "sample.json")
+        # save_dict_to_json(data, "sample.json")
         return data
 
 

@@ -3,7 +3,8 @@ import json
 from fastapi import APIRouter, UploadFile, HTTPException, status
 from fastapi.responses import JSONResponse
 from pydantic import ValidationError
-from database import Invoice  # Adjust import path as necessary
+from database import Invoice
+from models.invoceResponceModel import InvoiceResponse  # Adjust import path as necessary
 # import schemas 
 from models.invoiceModel import  MercuryEXRF 
 from models.invoiceModelDetailed import  DetailedReportDetails 
@@ -12,6 +13,8 @@ from exrf import extract_data_from_exrf_string  # Adjust import path as necessar
 from fastapi.encoders import jsonable_encoder 
 router = APIRouter()
 import logging
+
+
 @router.post("" ,response_model= Invoice )  # Ensure you have a valid path here
 async def upload_invoice(file: UploadFile ):
     file_name  = file.filename 
@@ -38,13 +41,14 @@ async def upload_invoice(file: UploadFile ):
         raise HTTPException(status_code=500, detail=f"Failed to save invoice data: {str(e)}")
     
 #  create get all invoices route
-@router.get("/", response_model= List[Invoice])
+    
+@router.get("" , response_model=List[InvoiceResponse])
 async def get_invoices():
     invoices = await Invoice.find_all().to_list()
-    return invoices
+    return [invoice.dict(exclude={"_id"}) for invoice in invoices]
 
 # create get invoice by id route
-@router.get("/{invoice_id}")
+@router.get("/{invoice_id}" , response_model=InvoiceResponse)
 async def get_invoice(invoice_id: str):
     invoiceData = await Invoice.find_one(Invoice.invoice_id == invoice_id)
     if invoiceData:

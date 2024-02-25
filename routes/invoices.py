@@ -14,32 +14,39 @@ from fastapi.encoders import jsonable_encoder
 router = APIRouter()
 import logging
 
+logging.basicConfig(filename='app2.log', level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-@router.post("" ,response_model= Invoice )  # Ensure you have a valid path here
-async def upload_invoice(file: UploadFile ):
-    file_name  = file.filename 
+@router.post("")  # Adjust the path as necessary
+async def upload_invoice(file: UploadFile):
+    logging.info("Attempting to upload file: %s", file.filename)
+    file_name = file.filename
     if not file_name.endswith(".exrf"):
+        logging.warning("Attempted to upload an invalid file type: %s", file_name)
         raise HTTPException(status_code=422, detail="Invalid file type. Only .exrf files are allowed.")
     
-    content = await file.read()
-    content = content.decode("utf-8")
-    data = extract_data_from_exrf_string(content)
-    mercury_exrf_instance = validate_mercury_exrf(data)
-    mercury_exrf_instance = mercury_exrf_instance.to_detailed_transaction_data_report()
-    report =  mercury_exrf_instance.report.model_dump()
-    report["invoice_id"] = report["id"]
-    del report["id"]
     try:
-        invoiceData = await Invoice.find_one(Invoice.invoice_id == report["invoice_id"])
-        if invoiceData:
-            raise HTTPException(status_code=401, detail=f"Invoice with id {report['invoice_id']} already exists.")
+        content = await file.read()
+        content = content.decode("utf-8")
+        data = extract_data_from_exrf_string(content)
+        mercury_exrf_instance = validate_mercury_exrf(data)
+        report_details = mercury_exrf_instance.to_detailed_transaction_data_report()
+        report = report_details.report.model_dump()
+        report["invoice_id"] = report["id"]
+        del report["id"]
+
+        invoice_data = await Invoice.find_one(Invoice.invoice_id == report["invoice_id"])
+        if invoice_data:
+            logging.warning("Invoice with id %s already exists.", report['invoice_id'])
+            raise HTTPException(status_code=400, detail=f"Invoice with id {report['invoice_id']} already exists.")
+
         invoice_instance = Invoice(**report)
-        logging.info(invoice_instance)
-        await invoice_instance.save() 
-        return invoice_instance  
+        await invoice_instance.save()
+        logging.info("Successfully saved invoice: %s", report["invoice_id"])
+        return invoice_instance
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to save invoice data: {str(e)}")
-    
+        logging.error("Failed to process and save invoice: %s", str(e))
+        raise HTTPException(status_code=500, detail=f"Failed to process and save invoice: {str(e)}")
 #  create get all invoices route
     
 @router.get("" , response_model=List[InvoiceResponse])

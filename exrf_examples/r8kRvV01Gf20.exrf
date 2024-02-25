@@ -1,0 +1,500 @@
+:Report:
+ID::r8kRvV01Gf20
+:Details:
+CreatedAt::20230513162900
+Status::4
+::Details::
+:Reporter:
+FullName::Andre Blick
+Email::Dave85@yahoo.com
+::Reporter::
+[Approvers]
+FullName::Ida Doyle
+Email::Sally56@hotmail.com
+[[Approvers]]
+[Transactions]
+Data::20230310130036D83196,14AED
+Reference::CXPZ3KZKUYW4HHB7
+Details::payment for Koepp LLC paid by card ***(...4947)
+::::
+Data::20240127051352D27663,01YER
+Reference::X8S2S7YNYGW1ZP94
+Details::invoice for O'Connell Inc paid by card ***(...1432)
+::::
+Data::20230605083615D57484,33GHS
+Reference::D5AU21W5MT72LX5P
+Details::invoice for Hagenes LLC paid by card ***(...1867)
+::::
+Data::20230901190458C87617,82TWD
+Reference::BEJOB45I4PM39FWX
+Details::payment for Blanda, Herman and MacGyver paid by card ***(...9578)
+::::
+Data::20231226183824D65267,77LRD
+Reference::6RO5EKO817MK4MTH
+Details::deposit for Littel Inc paid by card ***(...3294)
+::::
+Data::20230501210048D63065,42PKR
+Reference::5CGOMJZ3RC1QIWGE
+Details::deposit for Smitham, Runte and Collier paid by card ***(...5600)
+::::
+Data::20230214222018D30569,69MRU
+Reference::8UTEJJDLB7W93QNF
+Details::withdrawal for Hermann - Legros paid by card ***(...4378)
+::::
+Data::20230511114527D14352,90UYU
+Reference::3TRVS2IM89GYRBXK
+Details::withdrawal for McDermott Inc paid by card ***(...7568)
+::::
+Data::20231129041159C42280,88HUF
+Reference::99RUEUAC0K7E134O
+Details::withdrawal for Balistreri LLC paid by card ***(...1740)
+::::
+Data::20231112234821C74025,42GHS
+Reference::GEQ8AE54QCM2L2U4
+Details::invoice for Stokes LLC paid by card ***(...9389)
+::::
+Data::20230308061543C90223,82MNT
+Reference::PL371X2AIV7ONVR2
+Details::invoice for Kris and Sons paid by card ***(...0471)
+::::
+Data::20230706151816C89835,09BBD
+Reference::PX8VN4T4DH4SYZRS
+Details::invoice for Zemlak, Bode and Rosenbaum paid by card ***(...5292)
+::::
+Data::20230705201502C93655,58GBP
+Reference::H551GNUXEIO5JM0K
+Details::deposit for Mante - Hamill paid by card ***(...5315)
+::::
+Data::20231101014411C30211,76GEL
+Reference::CDETSCPGCD2JSJ5X
+Details::invoice for Kuhlman LLC paid by card ***(...6341)
+::::
+Data::20230929161538C63183,85KGS
+Reference::N42A9WNGMWGJBZKT
+Details::deposit for Gerhold, Mante and Koelpin paid by card ***(...5651)
+::::
+Data::20230226070058C10863,07LSL
+Reference::6AES0UHJENNOR7NL
+Details::withdrawal for Hagenes, Greenholt and Langosh paid by card ***(...8508)
+::::
+Data::20230301172808D35039,93NGN
+Reference::KWC7GP636DGKB1QU
+Details::deposit for Pagac, Bins and Donnelly paid by card ***(...3926)
+::::
+Data::20230619133555C7019,84HNL
+Reference::VSWBD4BNJXKHLSW0
+Details::payment for Thiel LLC paid by card ***(...2403)
+::::
+Data::20240114153603C22930,95UAH
+Reference::NEHBO83HNW26JCBF
+Details::payment for Rempel LLC paid by card ***(...0137)
+::::
+Data::20240126010156C21461,92BND
+Reference::V9SPXBI7Z6N48GP4
+Details::payment for Smitham, Trantow and Schiller paid by card ***(...5643)
+::::
+Data::20230410124119D95094,24KYD
+Reference::EC3GC9F0QSHOECTQ
+Details::withdrawal for Frami, Walter and Kuhlman paid by card ***(...0180)
+::::
+Data::20230920055617D99415,26SHP
+Reference::VVBPWQH2YU88ATUW
+Details::payment for Moen Inc paid by card ***(...4385)
+::::
+Data::20230805042004C7284,41GMD
+Reference::ZSK6RE8G7KTMRTT4
+Details::invoice for Morissette Inc paid by card ***(...6938)
+::::
+Data::20230208083141D47370,37MNT
+Reference::PJOEYHEMN9WS79QV
+Details::invoice for Gerlach Inc paid by card ***(...9057)
+::::
+Data::20231216060358C89679,88ETB
+Reference::DFZAGAYI7W9U113S
+Details::deposit for Will - Kuhic paid by card ***(...1716)
+::::
+Data::20230501021424D22175,76XCD
+Reference::EA205X2TZWYM9A2M
+Details::deposit for Bernhard - Smitham paid by card ***(...3613)
+::::
+Data::20230920000006C13969,37GIP
+Reference::FEYCFYEROZC5UZLD
+Details::payment for Grimes, Kiehn and DuBuque paid by card ***(...0607)
+::::
+Data::20230327093724C58763,90BYN
+Reference::WPPSJ9KON1KH1WPT
+Details::invoice for White - Mohr paid by card ***(...6384)
+::::
+Data::20230613110046C3356,10KYD
+Reference::V90INU14MQ8O50UK
+Details::deposit for Armstrong - Heathcote paid by card ***(...0043)
+::::
+Data::20230219104801C3652,00PEN
+Reference::HNGXLKZNJVS3HPE9
+Details::payment for Lueilwitz, Grimes and Medhurst paid by card ***(...7130)
+::::
+Data::20240125022713D10907,59XPF
+Reference::QDHR4LMX20YDU0N8
+Details::payment for Wolf Group paid by card ***(...1555)
+::::
+Data::20230411065928D11594,49BTN
+Reference::H6LF384V4ZZ471F2
+Details::payment for Reilly - Hilll paid by card ***(...8382)
+::::
+Data::20230617001250C27528,28VND
+Reference::NKKG2W6QVDU9W4SN
+Details::withdrawal for Huel, Zulauf and Bode paid by card ***(...2208)
+::::
+Data::20230724182836D30718,60SAR
+Reference::H841YJ849LU743ZS
+Details::payment for Shanahan Group paid by card ***(...2119)
+::::
+Data::20230314192648C63055,03MZN
+Reference::KV28X7VQ9FL75LBF
+Details::withdrawal for Bauch - Rolfson paid by card ***(...2160)
+::::
+Data::20240119101120C4791,00KWD
+Reference::54INW1JHLAMQL5XB
+Details::deposit for Kuhic LLC paid by card ***(...4836)
+::::
+Data::20231215124424D86436,86BBD
+Reference::XXQHYTARWU9UIFAW
+Details::payment for Cartwright - Hirthe paid by card ***(...5065)
+::::
+Data::20230712070546C69493,68PGK
+Reference::4W20EHDCE084DTSG
+Details::payment for Schmeler, Dicki and Hettinger paid by card ***(...6117)
+::::
+Data::20240202214243D58032,45PGK
+Reference::N81HARLWBVHMWYC2
+Details::invoice for Considine and Sons paid by card ***(...9003)
+::::
+Data::20230603102013C14450,33UYU
+Reference::VF8BF3S7B79SVL6R
+Details::withdrawal for Kshlerin Inc paid by card ***(...9880)
+::::
+Data::20230909163549C42594,99HUF
+Reference::7T0PGSLSIX4CN3AG
+Details::invoice for Leuschke, Wunsch and Heathcote paid by card ***(...7440)
+::::
+Data::20231122083226D22259,70GNF
+Reference::A40SEJTQKUI6S4M7
+Details::invoice for Casper, Turner and Kulas paid by card ***(...3166)
+::::
+Data::20231212144316D8208,12LBP
+Reference::KM2A8B8GFAYQ0VFK
+Details::deposit for Nicolas, Waters and Hartmann paid by card ***(...9104)
+::::
+Data::20231214062505C62433,23DJF
+Reference::IKCCBA2GY5TRCMGW
+Details::invoice for Carroll and Sons paid by card ***(...8862)
+::::
+Data::20230803155643C39426,11HKD
+Reference::DIOTBS8MAEKCIJNQ
+Details::invoice for Krajcik - Howell paid by card ***(...9000)
+::::
+Data::20230704053516D16065,85TND
+Reference::1QOQNHWLK8L8XCDE
+Details::invoice for Connelly Group paid by card ***(...0700)
+::::
+Data::20230705161945C97248,53MNT
+Reference::VO8YRVAKDUV1D33F
+Details::withdrawal for McCullough and Sons paid by card ***(...5622)
+::::
+Data::20231110162215D82042,41SAR
+Reference::66MOB66ZR0EQV3IT
+Details::deposit for Bins - Crist paid by card ***(...7714)
+::::
+Data::20230217090055D93302,74ZWL
+Reference::AXXK13IQ8DU7BK28
+Details::invoice for Schroeder, Kiehn and Brakus paid by card ***(...0167)
+::::
+Data::20231210013013C24097,14ZMW
+Reference::OL3LWTPPAPID960B
+Details::invoice for Boyer, Wiza and Emard paid by card ***(...5709)
+::::
+Data::20230515043157C24792,51KRW
+Reference::OVM0TRNW0ZBQON9M
+Details::payment for Windler, Von and Moore paid by card ***(...3290)
+::::
+Data::20231019153202D26755,92LBP
+Reference::GOS5WBGYLMTYS973
+Details::withdrawal for Yost, Kertzmann and Kuvalis paid by card ***(...9895)
+::::
+Data::20230418213329C32200,31MAD
+Reference::VORBSIOT81LE0XXB
+Details::withdrawal for Hodkiewicz, Steuber and Lynch paid by card ***(...4971)
+::::
+Data::20230709075933D74814,77YER
+Reference::CMY8WOWAPAJG3B5B
+Details::invoice for Schowalter - Goyette paid by card ***(...6407)
+::::
+Data::20230409200817D64594,97GEL
+Reference::GZF2AL2NAXXGMTM2
+Details::payment for McDermott Inc paid by card ***(...0160)
+::::
+Data::20231221004148C2651,00SYP
+Reference::6LH3TH632B8TFM1T
+Details::payment for Kemmer - Collins paid by card ***(...1420)
+::::
+Data::20230708055919D53787,63BBD
+Reference::8816YJUHM24CK4MK
+Details::payment for Cronin, Doyle and Beahan paid by card ***(...4771)
+::::
+Data::20230504153538C46552,78ZMW
+Reference::MTLRWL2R71079DAQ
+Details::withdrawal for Konopelski, Orn and Kutch paid by card ***(...7891)
+::::
+Data::20230618151019D54504,67JOD
+Reference::KLO6R7OVR0SSCL64
+Details::withdrawal for Bradtke - Hahn paid by card ***(...7225)
+::::
+Data::20230311195139C15060,51NGN
+Reference::1VGYFWIMEAIOK8U2
+Details::payment for Torphy, Greenholt and Bahringer paid by card ***(...1487)
+::::
+Data::20231116160004C39825,02JMD
+Reference::VL99G56KC85MV3E2
+Details::invoice for Schmitt, Rohan and Johnson paid by card ***(...6962)
+::::
+Data::20230316191311C19990,83ALL
+Reference::UFL431IGLR3OYWB1
+Details::deposit for Schuster - Lueilwitz paid by card ***(...0255)
+::::
+Data::20231011130042D48086,84NZD
+Reference::BQ0DGFZ3J7MBWZSJ
+Details::invoice for Casper, Cummerata and Cassin paid by card ***(...8814)
+::::
+Data::20230319093205D88806,58CUP
+Reference::JDTUYTZEL5FJ6EUK
+Details::invoice for Christiansen - Heidenreich paid by card ***(...9771)
+::::
+Data::20230818131634C4981,98DJF
+Reference::O4E5MIYQ7KJSMK65
+Details::deposit for D'Amore, Walsh and Moen paid by card ***(...2323)
+::::
+Data::20230901023413C28596,37GMD
+Reference::94N1UXMM5GT022RJ
+Details::deposit for Brown - Torphy paid by card ***(...8329)
+::::
+Data::20230526165044D41067,72ERN
+Reference::A3HK86HJWSNVX5R3
+Details::withdrawal for Weimann Group paid by card ***(...2910)
+::::
+Data::20240201183511D18609,40GEL
+Reference::4BEA8LRHMNR1ESVZ
+Details::payment for Kling Group paid by card ***(...9846)
+::::
+Data::20231205054814C64977,22ARS
+Reference::1XBMLYTXF9UPHLYT
+Details::payment for Hammes, Muller and Wolf paid by card ***(...3471)
+::::
+Data::20230221113422C74725,67XPF
+Reference::S55A8ZUH0JDV3LF0
+Details::invoice for Schaden - Harber paid by card ***(...7953)
+::::
+Data::20230817201434D98805,43LRD
+Reference::AAWFZ3CTJYBGLCKM
+Details::withdrawal for Leuschke LLC paid by card ***(...6928)
+::::
+Data::20240129124729C64688,13MYR
+Reference::505MDKQI3XG7Z8NX
+Details::withdrawal for Kuhlman, Gutmann and Huel paid by card ***(...8589)
+::::
+Data::20230914142326C4567,02ERN
+Reference::R4ERRLE1D3SR3VN8
+Details::deposit for Nicolas - Thompson paid by card ***(...4773)
+::::
+Data::20231228184331D319,14MNT
+Reference::VUZMHQIU494TBUR4
+Details::withdrawal for Simonis Group paid by card ***(...5275)
+::::
+Data::20230302101637C98471,27SHP
+Reference::RX752KKZHCEIAELU
+Details::withdrawal for Ritchie LLC paid by card ***(...4057)
+::::
+Data::20230720222826C59042,93MGA
+Reference::9A1RF7F6NKEDLP0L
+Details::withdrawal for Thiel and Sons paid by card ***(...7378)
+::::
+Data::20230223192918D22590,58UGX
+Reference::MJCGH0X8RITWWCNS
+Details::withdrawal for Cummerata - Kub paid by card ***(...9375)
+::::
+Data::20230330021956C60632,11AMD
+Reference::J1YXWFMIDRHXZX0M
+Details::withdrawal for Kilback - Adams paid by card ***(...6246)
+::::
+Data::20230310224047D80869,34SLE
+Reference::HZQMR6PYRKR4GZ5X
+Details::deposit for Bashirian and Sons paid by card ***(...0775)
+::::
+Data::20230921141119D58141,54KYD
+Reference::2TBTG5P8J5HH6J1P
+Details::invoice for Wisoky, Brown and Sanford paid by card ***(...4775)
+::::
+Data::20230210225142C71277,11MUR
+Reference::KTUEOTJ711ZDJOGC
+Details::invoice for Murray, Bechtelar and Fadel paid by card ***(...7099)
+::::
+Data::20230418164153D59050,00CRC
+Reference::JLT6C9HVE5TO3T68
+Details::deposit for Howe, Wolff and Schneider paid by card ***(...0635)
+::::
+Data::20230715231018D99882,72SZL
+Reference::GUHPZY5HBVNMXJK0
+Details::invoice for Beahan - Beatty paid by card ***(...6611)
+::::
+Data::20240128051134C22576,41PKR
+Reference::FPPMBQQJZE0Y4J16
+Details::withdrawal for Anderson, Effertz and Schuster paid by card ***(...8239)
+::::
+Data::20231025204502C97293,16NPR
+Reference::HDQDZ1S0K6ZGDAS5
+Details::payment for Hickle - Metz paid by card ***(...0012)
+::::
+Data::20230823060015C31423,36ISK
+Reference::5LYRWA393QU4YZN8
+Details::deposit for Murray Inc paid by card ***(...1256)
+::::
+Data::20230701080536C13137,07TWD
+Reference::Q1ZU9XX4CJERGU2U
+Details::withdrawal for Schowalter - Gottlieb paid by card ***(...5972)
+::::
+Data::20240108004658D68083,38TND
+Reference::L4IN6R2V32KT8QDN
+Details::invoice for Langosh and Sons paid by card ***(...7504)
+::::
+Data::20240113083634D91091,61LKR
+Reference::YD6CUSC1ALGY42JK
+Details::payment for Cassin, Oberbrunner and Crooks paid by card ***(...1706)
+::::
+Data::20231220182948D65148,96TTD
+Reference::OPMCDJCUIY78DWW6
+Details::withdrawal for Howell LLC paid by card ***(...0059)
+::::
+Data::20230206172452C64554,74MGA
+Reference::IQS41TALUJOP0BUQ
+Details::withdrawal for Walter Group paid by card ***(...5011)
+::::
+Data::20230429083600C43010,29MZN
+Reference::28L5D88DYQWQZZK1
+Details::invoice for Tromp - Parisian paid by card ***(...1178)
+::::
+Data::20230619195707C57713,08KZT
+Reference::56KXOCMT7AVH6RRG
+Details::deposit for Renner LLC paid by card ***(...5710)
+::::
+Data::20230716120334D68963,76FJD
+Reference::CDPCQIFK4RR46LIE
+Details::withdrawal for Schoen - Miller paid by card ***(...2179)
+::::
+Data::20230620004645C87892,34ANG
+Reference::HI5R07PKJH87JHS5
+Details::withdrawal for Connelly and Sons paid by card ***(...2998)
+::::
+Data::20230221112632C66340,73THB
+Reference::23QU1FPZBVX16IHQ
+Details::withdrawal for Schaefer, Runolfsdottir and Kuhn paid by card ***(...0440)
+::::
+Data::20230805013957C26799,25HTG
+Reference::4K38E2EQWW7GEKVI
+Details::deposit for Predovic LLC paid by card ***(...9773)
+::::
+Data::20230529004610D43705,90IDR
+Reference::G1WLZY1JHJB42A01
+Details::deposit for Fay Inc paid by card ***(...4890)
+::::
+Data::20231116024759D21954,52XPF
+Reference::EKN839E30LI92SPD
+Details::invoice for Collier LLC paid by card ***(...1862)
+::::
+Data::20230802002912D78030,12BWP
+Reference::PZ3H41PD2E1Q0DUN
+Details::deposit for Smitham - Jacobi paid by card ***(...9065)
+::::
+Data::20230413113215C99633,02THB
+Reference::5T857MFBO8MBBG1M
+Details::deposit for Schuster - Steuber paid by card ***(...8945)
+::::
+Data::20230728071257C37898,24UYU
+Reference::0HMY7CNAZAAT1E1T
+Details::deposit for Bayer - Greenholt paid by card ***(...6151)
+::::
+Data::20230713101226D3041,22BTN
+Reference::ZDFBKC2O77M4TDXB
+Details::payment for Medhurst - Jacobson paid by card ***(...8203)
+::::
+Data::20230723064435C393,53SSP
+Reference::0XQR6G9JD38JJQCR
+Details::withdrawal for Emard - Schultz paid by card ***(...4587)
+::::
+Data::20231113213318D619,51BTN
+Reference::79KKZ73RSYM803Z2
+Details::deposit for Wunsch and Sons paid by card ***(...0640)
+::::
+Data::20240123024750C74267,70SCR
+Reference::BO8U338LZM1CD43T
+Details::deposit for Crooks Group paid by card ***(...2566)
+::::
+Data::20230407220748D21256,01CAD
+Reference::K6DSLX3220JVB712
+Details::deposit for Heathcote, Reilly and Buckridge paid by card ***(...8743)
+::::
+Data::20231223001428D3610,39PGK
+Reference::VGP4CSACT2FR5EH3
+Details::payment for Batz, Steuber and Bode paid by card ***(...5818)
+::::
+Data::20230613203200C18724,74TJS
+Reference::HOVML6SRDW54QVSJ
+Details::invoice for Hammes, Balistreri and Rippin paid by card ***(...8877)
+::::
+Data::20230514222306C64449,25SSP
+Reference::5QE9XG15AXEKXRLB
+Details::withdrawal for Predovic Group paid by card ***(...7307)
+::::
+Data::20240204233121D17129,83ZAR
+Reference::DL4LB2KBYF5OMCLK
+Details::deposit for Skiles Inc paid by card ***(...4067)
+::::
+Data::20230331091013D4834,62AFN
+Reference::RW0P2OE9OW3JKD4N
+Details::invoice for Turcotte, Ziemann and West paid by card ***(...3671)
+::::
+Data::20230321165240C95300,38HUF
+Reference::WOAB4ZPI7CW5QNTF
+Details::payment for Windler - Cruickshank paid by card ***(...6956)
+::::
+Data::20231205062218C80051,00MKD
+Reference::03KIOB8RMXLF2NOI
+Details::withdrawal for Lubowitz - Koelpin paid by card ***(...4323)
+::::
+Data::20231017153614C81860,01PLN
+Reference::M8KAQUE9U2FJJ9YA
+Details::withdrawal for Bosco, Bayer and Kertzmann paid by card ***(...8511)
+::::
+Data::20231024045120D19644,67MZN
+Reference::JEV0UCRGPYKYBXIL
+Details::invoice for Raynor - Kessler paid by card ***(...9908)
+::::
+Data::20231004153533C75873,70KHR
+Reference::XBVG2GPQGKTEGYY4
+Details::deposit for Jones LLC paid by card ***(...9187)
+::::
+Data::20230515083048D78167,45OMR
+Reference::3IJJEJJGPEJY3RNU
+Details::payment for Ebert - Keeling paid by card ***(...3496)
+::::
+Data::20240120101325C47170,52SEK
+Reference::H9H9XU9RCI21QZ8F
+Details::withdrawal for Mann - Hirthe paid by card ***(...0838)
+::::
+Data::20230405062323D99604,77TJS
+Reference::HZAQ33N5SHMYY224
+Details::invoice for Hagenes LLC paid by card ***(...9475)
+::::
+Data::20231223164103C30801,71LBP
+Reference::L9IXKPLSPTDO6FZ7
+Details::deposit for Heaney Group paid by card ***(...5648)
+[[Transactions]]
+::Report::

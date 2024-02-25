@@ -1,3 +1,4 @@
+from fastapi import FastAPI
 from beanie import Document, init_beanie
 from motor.motor_asyncio import AsyncIOMotorClient
 from models.invoiceModelDetailed import  DetailedReportDetails 
@@ -28,3 +29,24 @@ def create_mongo_url():
     port = os.getenv("MONGO_PORT", "27017")
     MONGO_URL = f"mongodb://{user_name}:{password}@{host}:{port}/"
     return MONGO_URL
+
+
+def init_db(app: FastAPI):
+    """
+    Initialise db connection at startup
+    Shutdown the db at shutdown
+    :param app: FastAPI to initialise
+    :return: None
+    """
+    @app.on_event("startup")
+    async def startup_db_client():
+        MONGO_URL = create_mongo_url() 
+        client = AsyncIOMotorClient(MONGO_URL)
+        app.mongodb_client = client
+        DATABASE_NAME = os.getenv("DATABASE_NAME", "your_database_name")  # Ensure you have this environment variable set
+        await init_beanie(database=client[DATABASE_NAME], document_models=[Invoice])
+    @app.on_event("shutdown")
+    async def shutdown_db_client():
+        app.mongodb_client.close()
+
+

@@ -13,7 +13,12 @@ To get this project up and running locally on your computer:
 
 1. Set up a Python development environment.
 2. Fork this repository and clone your fork to your local machine.
-3. Navigate to the project directory and install dependencies using poetry:
+3. create .env file (you can rename example.env to .env )
+4. run the following comment to create an mongoDb container 
+```bash
+docker-compose -f docker-compose-db-only.yml up
+  ```  
+5. Navigate to the project directory and install dependencies using poetry:
 
 ```bash
 poetry install

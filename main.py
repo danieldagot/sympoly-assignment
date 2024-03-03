@@ -45,7 +45,7 @@ def create_app() -> FastAPI:
     
     return app
 
-def init_app() -> FastAPI:
+async def init_app() -> FastAPI:
     """
     Initialise a FastApi app, with all the required routes and the
     :return: FastAPI initialized app
@@ -55,7 +55,7 @@ def init_app() -> FastAPI:
     init_db(app_)
     @app_.on_event("startup")
     async def start_db():
-        await init_db(app_)
+       await  init_db(app_)
 
 
     return app_

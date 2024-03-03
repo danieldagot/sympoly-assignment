@@ -83,7 +83,9 @@ async def client_test():
 async def test_populate_must_work(client_test):
     # Assuming the fixture correctly sets up and yields an AsyncClient instance
     client = await client_test.__anext__()
-    response = await client.get("/invoices")
+    response = await client.get("")
+    
+    print(response)
     assert response.status_code == 200
     # If you need to perform cleanup, consider using try/finally
 
